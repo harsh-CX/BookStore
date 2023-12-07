@@ -73,7 +73,7 @@ export const bookData = [
       image: Book8,
       price: '$26.50',
       quantity: 28,
-      storeAddress: '123 Magic Street, Wonderland',
+      storeAddress: '14 Street-ground ,Townhall',
       isbnNumber: '978-8-9012-3456-7',
     },
     {
@@ -105,7 +105,7 @@ export const bookData = [
         image: Book2,
         price: '$24.99',
         quantity: 24,
-        storeAddress: '456 Oak Avenue, Townsville',
+        storeAddress: '563-B Park  Avenue',
         isbnNumber: '978-2-3456-7890-1',
       },
     

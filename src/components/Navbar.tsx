@@ -47,7 +47,7 @@ const Navbar=()=>{
                   required
                   
                 />
-                {/* </form> */}
+              
                 <svg
                 onClick={handleSearch}
                   className="mt-5 absolute w-4 h-4 right-3 top-3 text-gray-500 dark:text-gray-400"
