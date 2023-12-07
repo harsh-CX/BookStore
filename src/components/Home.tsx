@@ -5,7 +5,7 @@ import { bookData,ImgComponent } from "./Imgs";
 const Home = () =>{
     return(
 <>
-<Navbar bookData={bookData}></Navbar>
+<Navbar></Navbar>
 <Upperbody></Upperbody>
 <ImgComponent/>
 </>

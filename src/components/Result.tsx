@@ -24,30 +24,32 @@ const ResultPage = ()=>{
         <>
         <Navbar></Navbar>
 
-        <div className="flex items-center justify-center">
-     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex justify-center">
+  <div className="flex flex-row gap-8">
     {data.length > 0 ? (
       data.map((item, idx) => (
-        <div key={idx} className="flex items-center border border-gray-300 p-4 rounded-md">
-       
+        <div key={idx} className="flex mt-12 rounded-md bg-white shadow-md overflow-hidden">
+          {/* First Column: Book Image */}
           <div className="mr-4">
-            <img src={item.image.src} alt={item.title} className="w-32 h-32 object-cover rounded-md" />
+            <img
+              src={item.image.src}
+              alt={item.title}
+              className="w-80 h-80 object-cover rounded-md"
+            />
           </div>
-          
-       
-          <div>
-            <h2 className="text-xl font-semibold mb-2">{item.title}</h2>
+
+          {/* Second Column: Book Description */}
+          <div className="p-6">
+            <h2 className="text-2xl font-semibold mb-4">{item.title}</h2>
             <p className="text-gray-700 mb-2">Price: {item.price}</p>
             <p className="text-gray-700 mb-2">Quantity: {item.quantity}</p>
             <p className="text-gray-700 mb-2">ISBN: {item.isbnNumber}</p>
-            <p className="text-gray-700 mb-2">Store Address:{item.storeAddress}</p>
-            
-            
+            <p className="text-gray-700 mb-2">Store Address: {item.storeAddress}</p>
           </div>
         </div>
       ))
     ) : (
-      <div className="text-center">No Result</div>
+      <div className="text-center m-10 text-gray-700">No Results Found</div>
     )}
   </div>
 </div>

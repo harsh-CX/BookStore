@@ -4,7 +4,7 @@ import logo4 from "./../../images/logo4.png"
 import Link from "next/link"
 import { useRouter } from 'next/router';
 
-const Navbar=({})=>{
+const Navbar=()=>{
 
     const [searchTerm, setSearchTerm] = useState('');
     const router = useRouter();
