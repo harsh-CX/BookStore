@@ -4,12 +4,12 @@ import logo4 from "./../../images/logo4.png"
 import Link from "next/link"
 import { useRouter } from 'next/router';
 
-const Navbar=({bookData})=>{
+const Navbar=({})=>{
 
     const [searchTerm, setSearchTerm] = useState('');
     const router = useRouter();
 
-  const handleSearch = (e) => {
+  const handleSearch = (e:any) => {
     // e.preventDefault();
   
     router.push({
