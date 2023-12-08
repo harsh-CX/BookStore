@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Image from "next/image";
-import logo4 from "./../../images/logo4.png"
+import logo11 from "./../../images/logo11.png"
 import Link from "next/link"
 import { useRouter } from 'next/router';
 
@@ -10,7 +10,7 @@ const Navbar=()=>{
     const router = useRouter();
 
   const handleSearch = (e:any) => {
-    // e.preventDefault();
+    e.preventDefault();
   
     router.push({
         pathname: '/ResultPage',
@@ -27,7 +27,7 @@ const Navbar=()=>{
               <div className="flex-shrink-0">
               <div>
   <Image
-    src={logo4}
+    src={logo11}
     alt="Your Alternative Text"
     width={150}  // Set the width according to your design requirements
     height={100} // Set the height according to your design requirements
@@ -37,7 +37,7 @@ const Navbar=()=>{
               </div>
 
               <div className="relative ml-8">
-             
+             <form onSubmit={handleSearch}>
                 <input
                   type="search"
                   placeholder="Title or ISBN number.."
@@ -47,6 +47,7 @@ const Navbar=()=>{
                   required
                   
                 />
+                </form>
               
                 <svg
                 onClick={handleSearch}

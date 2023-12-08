@@ -7,7 +7,7 @@ const Home = () =>{
 <>
 <div className="overflow-x-hidden">
 <Navbar></Navbar>
-<Upperbody></Upperbody>
+
 <ImgComponent/>
 </div>
 
