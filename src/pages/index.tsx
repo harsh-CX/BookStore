@@ -1,6 +1,10 @@
-import Home from "./home"
+import Home from "./home";
 const Index: React.FC = () => {
-  return (<><Home /></>);
+  return (
+    <>
+      <Home />
+    </>
+  );
 };
 
 export default Index;

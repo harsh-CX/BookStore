@@ -1,8 +1,8 @@
 const Upperbody = () => {
-    return (
-      <>
+  return (
+    <>
       <div className="mx-5 mt-5">
-      <div className="bg-slate-500 py-14 text-center h-auto px-6 ">
+        <div className="bg-slate-500 py-14 text-center h-auto px-6 ">
           <p className="text-white text-2xl font-bold pb-5">FREE SHIPPING</p>
           <p className="text-white">
             ON ORDERS ABOVE $50 - USE COUPON CODE OVER50
@@ -20,14 +20,8 @@ const Upperbody = () => {
           </div>
         </div>
       </div>
-      
-      
-  
-       
-       
-      </>
-    );
-  };
-  
-  export default Upperbody;
-  
+    </>
+  );
+};
+
+export default Upperbody;

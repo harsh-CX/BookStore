@@ -1,56 +1,54 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import logo11 from "./../../images/logo11.png"
-import Link from "next/link"
-import { useRouter } from 'next/router';
+import logo11 from "./../../images/logo11.png";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-const Navbar=()=>{
+const Navbar = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const router = useRouter();
 
-    const [searchTerm, setSearchTerm] = useState('');
-    const router = useRouter();
-
-  const handleSearch = (e:any) => {
+  const handleSearch = (e: any) => {
     e.preventDefault();
-  
+
     router.push({
-        pathname: '/ResultPage',
-        query: { term: searchTerm},
-      });
-      setSearchTerm('');
-    };
-    return(
-        <>
-       <nav className="bg-white h-20 mt-4">
+      pathname: "/ResultPage",
+      query: { term: searchTerm },
+    });
+    setSearchTerm("");
+  };
+  return (
+    <>
+      <nav className="bg-white h-20 mt-4">
         <div className=" mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-              <div>
-  <Image
-    src={logo11}
-    alt="Your Alternative Text"
-    width={150}  // Set the width according to your design requirements
-    height={100} // Set the height according to your design requirements
-    className=" mt-4 border-gray-500"  // Add additional styling classes
-  />
-</div>
+                <div>
+                  <Image
+                    src={logo11}
+                    alt="Your Alternative Text"
+                    width={150} // Set the width according to your design requirements
+                    height={100} // Set the height according to your design requirements
+                    className=" mt-4 border-gray-500" // Add additional styling classes
+                  />
+                </div>
               </div>
 
               <div className="relative ml-8">
-             <form onSubmit={handleSearch}>
-                <input
-                  type="search"
-                  placeholder="Title or ISBN number.."
-                  onChange={(e)=> setSearchTerm(e.target.value)}
-                  id="default-search"
-                  className=" mt-4 block w-full md:w-96  p-4 pl-10 text-sm text-gray-900 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 border-2 border-black "
-                  required
-                  
-                />
+                <form onSubmit={handleSearch}>
+                  <input
+                    type="search"
+                    placeholder="Title or ISBN number.."
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    id="default-search"
+                    className=" mt-4 block w-full md:w-96  p-4 pl-10 text-sm text-gray-900 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 border-2 border-black "
+                    required
+                  />
                 </form>
-              
+
                 <svg
-                onClick={handleSearch}
+                  onClick={handleSearch}
                   className="mt-5 absolute w-4 h-4 right-3 top-3 text-gray-500 dark:text-gray-400"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +81,7 @@ const Navbar=()=>{
                   href="/"
                   className="mt-3 text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-base font-serif"
                 >
-                 Non-Fiction Books
+                  Non-Fiction Books
                 </a>
                 <Link
                   href="/"
@@ -91,20 +89,13 @@ const Navbar=()=>{
                 >
                   Request a Book
                 </Link>
-                
-                
-               
-
-          
               </div>
             </div>
-
-          
           </div>
         </div>
       </nav>
-        </>
-    )
-}
+    </>
+  );
+};
 
 export default Navbar;
