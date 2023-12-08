@@ -24,7 +24,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div>
+                <div onClick={() => router.push("/")}>
                   <Image
                     src={logo11}
                     alt="Your Alternative Text"
@@ -42,7 +42,7 @@ const Navbar = () => {
                     placeholder="Title or ISBN number.."
                     onChange={(e) => setSearchTerm(e.target.value)}
                     id="default-search"
-                    className=" mt-4 block w-full md:w-96  p-4 pl-10 text-sm text-gray-900 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 border-2 border-black "
+                    className=" mt-4 block w-full md:w-96  p-4 pl-10 text-sm text-black rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500   dark:focus:ring-blue-500 dark:focus:border-blue-500 border-2 border-black "
                     required
                   />
                 </form>

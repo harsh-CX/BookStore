@@ -25,7 +25,7 @@ const ResultPage = () => {
       <Navbar></Navbar>
 
       <div className="flex justify-center">
-        <div className="flex flex-row gap-8">
+        <div className="flex flex-wrap gap-4 justify-center">
           {data.length > 0 ? (
             data.map((item: any, idx: any) => (
               <div
@@ -37,7 +37,7 @@ const ResultPage = () => {
                   <img
                     src={item.image.src}
                     alt={item.title}
-                    className="w-80 h-80 object-cover rounded-md"
+                    className="w-50 h-80 p-2 object-cover rounded-md"
                   />
                 </div>
 
